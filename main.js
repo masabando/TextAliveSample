@@ -10,7 +10,7 @@ const animateWord = function (now, unit) {
 // TextAlive Player を作る
 const player = new Player({
   app: { token: "aB9rO5Q99KqkSuKj" },
-  mediaElement: document.querySelector("#media"),
+  mediaElement: document.querySelector(".media"),
 });
 
 player.addListener({
