@@ -19,9 +19,11 @@ document.querySelector("#play").disabled = true;
 
 
 player.addListener({
+  onTimerReady: () => {
+    document.querySelector("#play").disabled = false;
+  },
   // 動画オブジェクトの準備が整ったとき（楽曲に関する情報を読み込み終わったとき）に呼ばれる
   onVideoReady: (v) => {
-    document.querySelector("#play").disabled = false;
     // 定期的に呼ばれる各単語の "animate" 関数をセットする
     let w = player.video.firstWord;
     while (w) {
