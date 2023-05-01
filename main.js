@@ -10,7 +10,12 @@ const animateWord = function (now, unit) {
 // TextAlive Player を作る
 const player = new Player({
   app: { token: "aB9rO5Q99KqkSuKj" },
-  mediaElement: document.querySelector(".media"),
+  mediaElement: document.querySelector("#media"),
+});
+
+document.querySelector("#play").addEventListener(() => {
+  // king妃jack躍 / 宮守文学 feat. 初音ミク
+  player.createFromSongUrl("https://piapro.jp/t/ucgN/20230110005414");
 });
 
 player.addListener({
@@ -24,9 +29,5 @@ player.addListener({
     }
   },
   onAppReady: (app) => {
-    if (!app.managed) {
-      // king妃jack躍 / 宮守文学 feat. 初音ミク
-      player.createFromSongUrl("https://piapro.jp/t/ucgN/20230110005414");
-    }
   }
 });
