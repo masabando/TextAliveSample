@@ -13,6 +13,10 @@ const player = new Player({
   mediaElement: document.querySelector("#media"),
 });
 
+document.querySelector("#play").addEventListener("click", () => {
+  player.play();
+});
+
 player.addListener({
   // 動画オブジェクトの準備が整ったとき（楽曲に関する情報を読み込み終わったとき）に呼ばれる
   onVideoReady: (v) => {
