@@ -14,7 +14,7 @@ const player = new Player({
 });
 
 document.querySelector("#play").addEventListener("click", () => {
-  player.play();
+  player.requestPlay();
 });
 
 player.addListener({
