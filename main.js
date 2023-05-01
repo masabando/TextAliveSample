@@ -13,7 +13,7 @@ const player = new Player({
   mediaElement: document.querySelector("#media"),
 });
 
-document.querySelector("#play").addEventListener(() => {
+document.querySelector("#play").addEventListener("click", () => {
   // king妃jack躍 / 宮守文学 feat. 初音ミク
   player.createFromSongUrl("https://piapro.jp/t/ucgN/20230110005414");
 });
